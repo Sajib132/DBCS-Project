@@ -1,0 +1,183 @@
+mysql> CREATE DATABASE PET;
+Query OK, 1 row affected (0.43 sec)
+
+mysql> USE PET;
+Database changed
+mysql> CREATE TABLE Life_Cycle(Name varchar(255) NOT NULL PRIMARY KEY, Des Varchar(255) NOT NULL);
+Query OK, 0 rows affected (0.73 sec)
+
+mysql> CREATE TABLE STEP(Name varchar(255) NOT NULL PRIMARY KEY, Des Varchar(255) NOT NULL);
+Query OK, 0 rows affected (0.89 sec)
+
+mysql> CREATE TABLE TASK(Name varchar(255) NOT NULL PRIMARY KEY, Des Varchar(255) NOT NULL);
+Query OK, 0 rows affected (0.41 sec)
+
+mysql> CREATE TABLE ROLES(Name varchar(255) NOT NULL PRIMARY KEY, Des Varchar(255) NOT NULL);
+Query OK, 0 rows affected (0.41 sec)
+
+mysql> CREATE TABLE CONDITIONS(Name varchar(255) NOT NULL PRIMARY KEY, Des Varchar(255) NOT NULL);
+Query OK, 0 rows affected (0.72 sec)
+
+mysql> CREATE TABLE EFFORT_CATEGORY(Name varchar(255) NOT NULL PRIMARY KEY, Des Varchar(255) NOT NULL);
+Query OK, 0 rows affected (0.51 sec)
+
+mysql> CREATE TABLE ARTIFACTS(Name varchar(255) NOT NULL PRIMARY KEY, Des Varchar(255) NOT NULL);
+Query OK, 0 rows affected (0.86 sec)
+
+mysql> CREATE TABLE PLAN(Name varchar(255) NOT NULL PRIMARY KEY, Des Varchar(255) NOT NULL);
+Query OK, 0 rows affected (0.45 sec)
+
+mysql> CREATE TABLE INTERUPTIONS(Name varchar(255) NOT NULL PRIMARY KEY, Des Varchar(255) NOT NULL);
+Query OK, 0 rows affected (0.33 sec)
+
+mysql> CREATE TABLE DEFECTS(Name varchar(255) NOT NULL PRIMARY KEY, Des Varchar(255) NOT NULL);
+Query OK, 0 rows affected (0.53 sec)
+
+mysql> SHOW TABLES;
++-----------------+
+| Tables_in_pet   |
++-----------------+
+| artifacts       |
+| conditions      |
+| defects         |
+| effort_category |
+| interuptions    |
+| life_cycle      |
+| plan            |
+| roles           |
+| step            |
+| task            |
++-----------------+
+10 rows in set (0.07 sec)
+
+mysql> DESC LIFE_CYCLE;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| Name  | varchar(255) | NO   | PRI | NULL    |       |
+| Des   | varchar(255) | NO   |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+2 rows in set (0.06 sec)
+
+mysql> DESC ARTIFACTS;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| Name  | varchar(255) | NO   | PRI | NULL    |       |
+| Des   | varchar(255) | NO   |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> DESC CONDITIONS;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| Name  | varchar(255) | NO   | PRI | NULL    |       |
+| Des   | varchar(255) | NO   |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> DESC EFFORT_CATEGORY;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| Name  | varchar(255) | NO   | PRI | NULL    |       |
+| Des   | varchar(255) | NO   |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> DESC DEFECTS;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| Name  | varchar(255) | NO   | PRI | NULL    |       |
+| Des   | varchar(255) | NO   |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> DESC INTERUPTIONS;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| Name  | varchar(255) | NO   | PRI | NULL    |       |
+| Des   | varchar(255) | NO   |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> DESC ROLES;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| Name  | varchar(255) | NO   | PRI | NULL    |       |
+| Des   | varchar(255) | NO   |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> DESC PLAN;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| Name  | varchar(255) | NO   | PRI | NULL    |       |
+| Des   | varchar(255) | NO   |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> DESC TASK;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| Name  | varchar(255) | NO   | PRI | NULL    |       |
+| Des   | varchar(255) | NO   |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> DESC STEP;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| Name  | varchar(255) | NO   | PRI | NULL    |       |
+| Des   | varchar(255) | NO   |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> INSERT INTO LIFE_CYCLE VALUES('LifeCycle Name1','LifeCycle Description1'),('LifeCycle Name2','LifeCycle Description2'),('LifeCycle Name3','LifeCycle Description3'),('LifeCycle Name4','LifeCycle Description4'),('LifeCycle Name5','LifeCycle Description5');
+Query OK, 5 rows affected (0.20 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO STEP VALUES('Step1','Description1'),('Step2','Description2'),('Step3','Description3'),('Step4','Description4'),('Step5','Description5');
+Query OK, 5 rows affected (0.20 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO TASK VALUES('Task1', 'Description1'),('Task2', 'Description2'),('Task3', 'Description3'),('Task4', 'Description4'),('Task5', 'Description5');
+Query OK, 5 rows affected (0.12 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO ROLES VALUES('Role1','Description1'),('Role2','Description2'),('Role3','Description3'),('Role4','Description4'),('Role5','Description5');
+Query OK, 5 rows affected (0.20 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO CONDITIONS VALUES('Condition1','Description1'),('Condition2','Description2'),('Condition3','Description3'),('Condition4','Description4'),('Condition5','Description5');
+Query OK, 5 rows affected (0.19 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO EFFORT_CATEGORY VALUES('EF1','Description1'),('EF2','Description2'),('EF3','Description3'),('EF4','Description4'),('EF5','Description5');
+Query OK, 5 rows affected (0.22 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+ 
+mysql> INSERT INTO INTERUPTIONS VALUES('IR1','Description1'),('IR2','Description2'),('IR3','Description3'),('IR4','Description4'),('IR5','Description5');
+Query OK, 5 rows affected (0.15 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO DEFEctS VALUES('Defects1','Description1'),('Defects2','Description2'),('Defects3','Description3'),('Defects4','Description4'),('Defects5','Description5');
+Query OK, 5 rows affected (0.18 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO PLAN VALUES('Plan1','Description1'),('Plan2','Description2'),('Plan3','Description3'),('Plan4','Description4'),('Plan5','Description5');
+Query OK, 5 rows affected (0.14 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO ARTIFACTS VALUES('AI1','Description1'),('AI2','Description2'),('AI3','Description3'),('AI4','Description4'),('AI5','Description5');
+Query OK, 5 rows affected (0.15 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> Terminal close -- exit!
