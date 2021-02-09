@@ -1,0 +1,137 @@
+mysql> CREATE DATABASE PET;
+Query OK, 1 row affected (0.22 sec)
+
+mysql> USE PET;
+Database changed
+mysql> CREATE TABLE LifeCycle(Seq_NO INT PRIMARY KEY AUTO_INCREMENT, Name varchar(255) NOT NULL, Description varchar(255) NOT NULL);
+Query OK, 0 rows affected (0.96 sec)
+
+mysql> CREATE TABLE Steps(Seq_NO INT PRIMARY KEY AUTO_INCREMENT, Name varchar(255) NOT NULL, Description varchar(255) NOT NULL);
+Query OK, 0 rows affected (0.67 sec)
+
+mysql> CREATE TABLE Tasks(Seq_NO INT PRIMARY KEY AUTO_INCREMENT, Name varchar(255) NOT NULL, Description varchar(255) NOT NULL);
+Query OK, 0 rows affected (0.43 sec)
+
+mysql> CREATE TABLE Effort_Category(Seq_NO INT PRIMARY KEY AUTO_INCREMENT, Name varchar(255) NOT NULL, Description varchar(255) NOT NULL);
+Query OK, 0 rows affected (0.38 sec)
+
+mysql> CREATE TABLE Roles(Seq_NO INT PRIMARY KEY AUTO_INCREMENT, Name varchar(255) NOT NULL, Description varchar(255) NOT NULL);
+Query OK, 0 rows affected (0.49 sec)
+
+mysql> CREATE TABLE Artifacts(Seq_NO INT PRIMARY KEY AUTO_INCREMENT, Name varchar(255) NOT NULL, Description varchar(255) NOT NULL);
+Query OK, 0 rows affected (0.33 sec)
+
+mysql> CREATE TABLE Plan(Seq_NO INT PRIMARY KEY AUTO_INCREMENT, Name varchar(255) NOT NULL, Description varchar(255) NOT NULL);
+Query OK, 0 rows affected (0.45 sec)
+
+mysql> CREATE TABLE Interruptions(Seq_NO INT PRIMARY KEY AUTO_INCREMENT, Name varchar(255) NOT NULL, Description varchar(255) NOT NULL);
+Query OK, 0 rows affected (0.95 sec)
+
+mysql> CREATE TABLE Defects(Seq_NO INT PRIMARY KEY AUTO_INCREMENT, Name varchar(255) NOT NULL, Description varchar(255) NOT NULL);
+Query OK, 0 rows affected (1.11 sec)
+
+mysql> CREATE TABLE Conditions(Seq_No INT PRIMARY KEY AUTO_INCREMENT, Name varchar(255) NOT NULL, Description varchar(255) NOT NULL, Conditions_State varchar(10) NOT NULL DEFAULT TRUE);
+Query OK, 0 rows affected (1.98 sec)
+
+mysql> DESC Lifecycle;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| Seq_NO      | int          | NO   | PRI | NULL    | auto_increment |
+| Name        | varchar(255) | NO   |     | NULL    |                |
+| Description | varchar(255) | NO   |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+3 rows in set (0.39 sec)
+
+mysql> DESC Tasks;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| Seq_NO      | int          | NO   | PRI | NULL    | auto_increment |
+| Name        | varchar(255) | NO   |     | NULL    |                |
+| Description | varchar(255) | NO   |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> DESC Steps;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| Seq_NO      | int          | NO   | PRI | NULL    | auto_increment |
+| Name        | varchar(255) | NO   |     | NULL    |                |
+| Description | varchar(255) | NO   |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> DESC Conditions;
++------------------+--------------+------+-----+---------+----------------+
+| Field            | Type         | Null | Key | Default | Extra          |
++------------------+--------------+------+-----+---------+----------------+
+| Seq_No           | int          | NO   | PRI | NULL    | auto_increment |
+| Name             | varchar(255) | NO   |     | NULL    |                |
+| Description      | varchar(255) | NO   |     | NULL    |                |
+| Conditions_State | varchar(10)  | NO   |     | 1       |                |
++------------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> DESC Roles;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| Seq_NO      | int          | NO   | PRI | NULL    | auto_increment |
+| Name        | varchar(255) | NO   |     | NULL    |                |
+| Description | varchar(255) | NO   |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> DESC Artifacts;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| Seq_NO      | int          | NO   | PRI | NULL    | auto_increment |
+| Name        | varchar(255) | NO   |     | NULL    |                |
+| Description | varchar(255) | NO   |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> DESC Plan;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| Seq_NO      | int          | NO   | PRI | NULL    | auto_increment |
+| Name        | varchar(255) | NO   |     | NULL    |                |
+| Description | varchar(255) | NO   |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+3 rows in set (0.02 sec)
+
+mysql> DESC Interruptions;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| Seq_NO      | int          | NO   | PRI | NULL    | auto_increment |
+| Name        | varchar(255) | NO   |     | NULL    |                |
+| Description | varchar(255) | NO   |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> DESC Defects;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| Seq_NO      | int          | NO   | PRI | NULL    | auto_increment |
+| Name        | varchar(255) | NO   |     | NULL    |                |
+| Description | varchar(255) | NO   |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> DESC Effort_Category;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| Seq_NO      | int          | NO   | PRI | NULL    | auto_increment |
+| Name        | varchar(255) | NO   |     | NULL    |                |
+| Description | varchar(255) | NO   |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+3 rows in set (0.05 sec)
+
+mysql> Terminal close -- exit!
